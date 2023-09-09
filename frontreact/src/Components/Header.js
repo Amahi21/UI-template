@@ -1,11 +1,17 @@
 import React, { Component } from "react";
 import { Navbar, Nav, Container, FormControl, Form, Button } from "react-bootstrap";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import logo from "./logo.png" 
+import logo from "../images/logo.png" 
+
+import Home from "../Pages/Home"
+import Light from "../Pages/Light"
+import Info from "../Pages/Info"
 
 export default  class Header extends Component {
 	render() {
 		return (
+			<>
 			<Navbar collapseOnSelect expand="md" bg="dark" variant="dark">
 				<Container>
 					<Navbar.Brand href="/" >
@@ -30,11 +36,20 @@ export default  class Header extends Component {
 								placeholder="Search"
 								className="mr-sm-2"
 							/>
-							<Button variant="outline-info">Search</Button>
+							<Button className="ml-10" variant="outline-info">Search</Button>
 						</Form>
 					</Navbar.Collapse>
 				</Container>
 			</Navbar>
+
+			<Router>
+					<Switch>
+						<Route exact path="/" component={Home}/>
+						<Route exact path="/light" component={Light}/>
+						<Route exact path="/info" component={Info}/>
+					</Switch>
+				</Router>
+			</>
 		)
 	}
 }
