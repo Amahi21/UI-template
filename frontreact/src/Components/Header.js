@@ -3,6 +3,7 @@ import { Navbar, Nav, Container, FormControl, Form, Button } from "react-bootstr
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from "../images/logo.png"
+import LoginWindow from "../Pages/LoginWindow"
 
 import Home from "../Pages/Home"
 import Light from "../Pages/Light"
@@ -44,7 +45,8 @@ export default class Header extends Component {
 						<Route exact path="/" component={Home} />
 						<Route exact path="/light" component={Light} />
 						<Route exact path="/info" component={Info} />
-					</Switch>
+						<Route exact path="/login" component={LoginWindow} />
+ 					</Switch>
 				</Router>
 			</>
 		)

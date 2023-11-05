@@ -5,4 +5,5 @@ export default class AuthorizedProfile extends Component {
 	render() {
 		
 	}
+	
 }

@@ -5,9 +5,9 @@ export default class LoginProfile extends Component {
 
 	render() {
 		return (
-			<div class="text-end">
-				<button type="button" class="btn btn-outline-light me-2">Login</button>
-				<button type="button" class="btn btn-warning">Sign-up</button>
+			<div className="text-end">
+				<a href="/login" type="button" className="btn btn-outline-light me-2">Login</a>
+				<a type="button" className="btn btn-warning">Sign-up</a>
 			</div>
 		)
 	}
